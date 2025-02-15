@@ -1,9 +1,19 @@
 /* Theme switch - please see file `system.css` for details */
 :root {
-	--color-weakest: hsl(0deg, 0%, 0%);
-	--color-weaker: hsl(0deg, 0%, 20%);
-	--color-weak: hsl(0deg, 0%, 40%);
-	--color-strong: hsl(0deg, 0%, 60%);
-	--color-stronger: hsl(0deg, 0%, 80%);
-	--color-strongest: hsl(0deg, 0%, 100%);
+  /* Strength colors */
+  --color-strongest: hsl(0deg, 0%, 100%);
+  --color-stronger: hsl(0deg, 0%, 80%);
+  --color-strong: hsl(0deg, 0%, 60%);
+  --color-weak: hsl(0deg, 0%, 40%);
+  --color-weaker: hsl(0deg, 0%, 20%);
+  --color-weakest: hsl(0deg, 0%, 0%);
+
+  /* Rainbow colors */
+  --color-red: "#FF0000";
+  --color-orange: "#FFA500";
+  --color-yellow: "#FFFF00";
+  --color-green: "#008000";
+  --color-blue: "#0000FF";
+  --color-indigo: "#4B0082";
+  --color-violet: "#4B0082";
 }
