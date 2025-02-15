@@ -1,0 +1,44 @@
+/*
+
+Theme switch
+
+https://nicobachner.com/sveltekit-theme-switch
+
+Complementary files:
+
+* src/global.d.ts
+* src/lib/stores.ts
+* src/lib/components/ThemeSwitch.svelte
+* static/theme/{system,light,dark}.css          
+
+The file `light.css` and file `dark.css` are straightforward.
+
+The file `system.css` requires more attention. This is because we need to think
+about the user's system preferences. While the prefers-color-scheme media query
+makes accessing the user's preference a straightforward process, we need to keep
+in mind that the browser provides only two predefined choices, light and dark.
+Hence we need to style accordingly.
+
+*/
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-weakest: hsl(0deg, 0%, 100%);
+		--color-weaker: hsl(0deg, 0%, 80%);
+		--color-weak: hsl(0deg, 0%, 60%);
+		--color-strong: hsl(0deg, 0%, 40%);
+		--color-stronger: hsl(0deg, 0%, 20%);
+		--color-strongest: hsl(0deg, 0%, 0%);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-weakest: hsl(0deg, 0%, 0%);
+		--color-weaker: hsl(0deg, 0%, 20%);
+		--color-weak: hsl(0deg, 0%, 40%);
+		--color-strong: hsl(0deg, 0%, 60%);
+		--color-stronger: hsl(0deg, 0%, 80%);
+		--color-strongest: hsl(0deg, 0%, 100%);
+	}
+}
